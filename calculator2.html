@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    .column {
+  float: left;
+  padding: 10px;
+  height: 500px; /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 30%;
+  border-style: solid;
+}
+
+.middle {
+  width: 15%;;
+}
+
+.right {
+  width: 20%;;
+}
+#input{
+    height: 60px;
+    width: 180px;
+    background-color: #B8FF33;
+    transition-duration: 0.4s;
+    font-style: italic;
+    border-width: 2px;
+    font-family: 'Digital-7 Mono', arial;
+    border-style: inset;
+}
+#output{
+    height: 60px;
+    width: 180px;
+    background-color: #B8FF33;
+    transition-duration: 0.4s;
+    font-style: italic;
+    border-style: inset;
+    font-family: 'Digital-7', arial;
+}
+.button{
+    height: 50px;
+     width: 91.5px;
+     border-style: ridge;
+}
+.op{
+    background-color:   #91949b ;
+}
+.o{
+    background-color:  #ff9933;
+}
+.clear{
+    background-color:#F55E59 ;
+}
+.b{
+    background-color:#000080;
+    color:white;
+
+}
+p.inset {border-style: inset;}
+</style>
+<body>
+
+        <link href="https://allfont.net/allfont.css?fonts=digital-7" rel="stylesheet" type="text/css" />
+
+        <div class="row">
+                <div class="column left" style="background-color:#aaa;">
+            <div class="inset">
+             <!-- <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"><b>C A L C U L A T O R</b></p> -->
+            <table>
+                <tr>
+                    <th><br><textarea  placeholder="INPUT HERE" id="input"></textarea></th>
+                
+                    <th><br><textarea id="output" placeholder="YOUR ANSWER"></textarea></th>
+                </tr>
+            </table>
+            </div>
+            <table>
+                <tr>
+                        <th>  <button type="button" class="button clear" onclick="C()">C</button>  </th>
+                        <th>  <button type="button" class="button op" onclick="power()">^</button>  </th>
+                        <th>  <button type="button" class="button op" onclick="back()"><<</button>  </th>
+                        <th>  <button type="button" class="button op" onclick="div()">/</button>  </th>
+                        
+                </tr>
+
+                <tr>
+                        <th>  <button type="button" class="button" onclick="seven()">7</button>  </th>
+                        <th>  <button type="button" class="button" onclick="eight()">8</button>  </th>
+                        <th>  <button type="button" class="button" onclick="nine()">9</button>  </th>
+                        <th>  <button type="button" class="button op" onclick="mul()">*</button>  </th>
+                        
+                </tr>
+
+                <tr>
+                        <th>  <button type="button" class="button" onclick="four()">4</button>  </th>
+                        <th>  <button type="button" class="button" onclick="five()">5</button>  </th>
+                        <th>  <button type="button" class="button" onclick="six()">6</button>  </th>
+                        <th>  <button type="button" class="button op" onclick="minus()">-</button>  </th>
+                        
+                </tr>
+
+                <tr>
+                        <th>  <button type="button" class="button" onclick="one()">1</button>  </th>
+                        <th>  <button type="button" class="button" onclick="two()">2</button>  </th>
+                        <th>  <button type="button" class="button" onclick="three()">3</button>  </th>
+                        <th>  <button type="button" class="button op" onclick="add()">+</button>  </th>
+                        
+                </tr>
+
+                <tr>
+                        <th>  <button type="button" class="button" onclick="dot()">.</button>  </th>
+                        <th>  <button type="button" class="button" onclick="zero()">0</button>  </th>  
+                        <th>  <button type="button" class="button op" onclick="left()">(</button>  </th>
+                        <th>  <button type="button" class="button op" onclick="right()">)</button>  </th>         
+                       
+                </tr>
+                <tr>
+                        
+                        <th>  <button type="button" class="button b" onclick="equal()">=</button>  </th>
+                        <th>  <button type="button" class="button o" onclick="OFF()">OFF</button>  </th>
+                        <th>  <button type="button" class="button o" onclick="ON()">ON</button>  </th>
+                        <th>  <button type="button" class="button op" onclick="modulo()">%</button>  </th>
+                        
+                </tr>
+
+            </table>
+             
+
+             </div>
+</body>
+
+<script>
+
+function one() {
+
+if(document.getElementById("input").value==0)
+{
+    document.getElementById("input").value ="1";
+}
+else
+{
+    document.getElementById("input").value =document.getElementById("input").value+"1";
+}
+
+}
+
+function two() {
+
+if(document.getElementById("input").value==0)
+{
+    document.getElementById("input").value ="2";
+}
+else
+{
+    document.getElementById("input").value =document.getElementById("input").value+"2";
+}
+
+}
+
+function three() {
+
+if(document.getElementById("input").value==0)
+{
+    document.getElementById("input").value ="3";
+}
+else
+{
+    document.getElementById("input").value =document.getElementById("input").value+"3";
+}
+
+}
+
+function four() {
+
+if(document.getElementById("input").value==0)
+{
+    document.getElementById("input").value ="4";
+}
+else
+{
+    document.getElementById("input").value =document.getElementById("input").value+"4";
+}
+
+}
+
+function five() {
+
+if(document.getElementById("input").value==0)
+{
+    document.getElementById("input").value ="5";
+}
+else
+{
+    document.getElementById("input").value =document.getElementById("input").value+"5";
+}
+
+}
+
+function six() {
+
+if(document.getElementById("input").value==0)
+{
+    document.getElementById("input").value ="6";
+}
+else
+{
+    document.getElementById("input").value =document.getElementById("input").value+"6";
+}
+
+}
+function seven() {
+
+if(document.getElementById("input").value==0)
+{
+    document.getElementById("input").value ="7";
+}
+else
+{
+    document.getElementById("input").value =document.getElementById("input").value+"7";
+}
+
+}
+
+function eight() {
+
+if(document.getElementById("input").value==0)
+{
+    document.getElementById("input").value ="8";
+}
+else
+{
+    document.getElementById("input").value =document.getElementById("input").value+"8";
+}
+
+
+}
+
+function nine() {
+
+if(document.getElementById("input").value==0)
+{
+    document.getElementById("input").value ="9";
+}
+else
+{
+    document.getElementById("input").value =document.getElementById("input").value+"9";
+}
+
+}
+function zero() {
+
+if(document.getElementById("input").value==0)
+{
+    document.getElementById("input").value ="0";
+}
+else
+{
+    document.getElementById("input").value =document.getElementById("input").value+"0";
+}
+
+}
+
+
+function dot() {
+
+if(document.getElementById("input").value==0)
+{
+    document.getElementById("input").value =".";
+}
+else
+{
+    document.getElementById("input").value =document.getElementById("input").value+".";
+}
+
+}
+
+function left() {
+
+if(document.getElementById("input").value==0)
+{
+    document.getElementById("input").value ="(";
+}
+else
+{
+    document.getElementById("input").value =document.getElementById("input").value+"(";
+}
+
+}
+function right() {
+
+if(document.getElementById("input").value==0)
+{
+    document.getElementById("input").value =")";
+}
+else
+{
+    document.getElementById("input").value =document.getElementById("input").value+")";
+}
+
+}
+
+
+function add()
+{
+    document.getElementById("input").value =document.getElementById("input").value+"+";
+}
+
+function minus()
+{
+    document.getElementById("input").value =document.getElementById("input").value+"-";
+}
+function mul()
+{
+    document.getElementById("input").value =document.getElementById("input").value+"*";
+}
+function modulo()
+{
+    document.getElementById("input").value =document.getElementById("input").value+"%";
+}
+function div()
+{
+    document.getElementById("input").value =document.getElementById("input").value+"/";
+}
+function C()
+{
+    document.getElementById("input").value ="";
+    document.getElementById("output").value ="";
+}
+function power()
+{
+    document.getElementById("input").value =document.getElementById("input").value+"**";
+}
+
+function back()
+{
+    const text =  document.getElementById("input").value;
+    const editedText = text.slice(0, -1);
+    document.getElementById("input").value=editedText;
+}
+
+function ON() {
+  document.getElementById("input").value ="";
+  document.getElementById("output").value ="";
+  document.getElementById("input").style.background="#B8FF33";
+  document.getElementById("output").style.background="#B8FF33";
+
+}
+function OFF() {
+  document.getElementById("input").value =" ";
+  document.getElementById("output").value =" ";
+  document.getElementById("input").style.background="#6b6b47";
+  document.getElementById("output").style.background="#6b6b47";
+  document.getElementById("input").style.color="#6b6b47";
+  document.getElementById("output").style.color="#6b6b47";
+
+}
+
+
+
+
+function equal()
+{
+    document.getElementById("output").value =eval(document.getElementById("input").value);
+}
+</script>
+</html>
