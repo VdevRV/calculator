@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html>
+    <style>
+
+.column {
+  float: left;
+  padding: 10px;
+  height: 650px; /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 50%;
+}
+
+.middle {
+  width: 30%;;
+}
+
+.right {
+  width: 20%;;
+}
+
+#user1:hover {
+        color: black;
+        background-color: rgb(0, 153, 51);
+        height: 30px;
+        width: 30px;
+        box-shadow: black;
+      }
+#user1{
+    background-color: rgb(0, 153, 51);
+}
+#user2{
+    background-color:  rgb(26, 117, 255);
+}
+
+#user2:hover {
+        color: black;
+        background-color: rgb(26, 117, 255);
+        height: 30px;
+        width: 30px;
+        box-shadow: black;
+      }
+      .user{
+        height: 25px;
+        width: 100px;
+        
+        transition-duration: 0.4s;
+        font-size: 16px;
+        text-align: center;
+        background-color: white;
+        margin-top: 30px;
+        border-radius: 5px;
+        padding: 15px 32px;
+        text-align: center;
+        border-color: blueviolet;
+        border-width: 15px;
+    
+    }
+
+        .box:hover {
+        color: black;
+        background-color: wheat;
+        height: 30px;
+        width: 30px;
+        box-shadow: black;
+      }
+    
+      .box{
+        height: 25px;
+        width: 25px;
+        
+        transition-duration: 0.8s;
+        font-size: 16px;
+        text-align: center;
+        background-color: wheat;
+        margin-top: 30px;
+        border-radius: 5px;
+        padding: 15px 32px;
+        text-align: center;
+        border-color: blueviolet;
+        border-width: 15px;
+    
+    }
+
+
+    </style>
+<body>
+
+        <div class="row">
+                <div class="column left" style="background-color:#aaa;">
+
+<h1>Bus Seat selection</h1>
+<p><table style="width: 10%;">
+    <tr>
+
+         <td>    <div class="box a" onclick="mainFunctiona()" id="a"> a</div></td>
+         <td>    <div class="box b" onclick="mainFunctionb()" id="b"> b</div></td>
+         <td>    <div class="box c" onclick="mainFunctionc()" id="c"> c</div></td>
+         <td>    <div class="box d" onclick="mainFunctiond()" id="d"> d</div></td>
+         <td>    <div class="box e" onclick="mainFunctione()" id="e"> e</div></td>
+         <td>    <div class="box f" onclick="mainFunctionf()" id="f"> f</div></td>
+        
+    </tr>
+    <tr>    
+         
+            <td>    <div class="box g" onclick="mainFunctiong()" id="g"> g</div></td>
+            <td>    <div class="box h" onclick="mainFunctionh()" id="h"> h</div></td>
+            <td></td>
+            <td></td>
+            <td>    <div class="box i" onclick="mainFunctioni()" id="i"> i</div></td>
+            <td>    <div class="box j" onclick="mainFunctionj()" id="j"> j</div></td>
+      
+    </tr>
+
+    <tr>
+      
+            <td>    <div class="box k" onclick="mainFunctionk()" id="k"> k</div></td>
+            <td>    <div class="box l" onclick="mainFunctionl()" id="l"> l</div></td>
+            <td> </td>
+            <td> </td>
+            <td>    <div class="box m" onclick="mainFunctionm()" id="m"> m</div></td>   
+            <td>    <div class="box n" onclick="mainFunctionn()" id="n"> n</div></td> 
+   </tr>
+
+   <tr>
+
+        <td>    <div class="box o" onclick="mainFunctiono()" id="o"> o</div></td>
+        <td>    <div class="box p" onclick="mainFunctionp()" id="p"> p</div></td>
+        <td> </td>
+        <td></td>
+        <td>    <div class="box q" onclick="mainFunctionq()" id="q"> q</div></td>
+        <td>    <div class="box r" onclick="mainFunctionr()" id="r"> r</div></td>
+   
+    
+
+</tr>
+
+<tr>
+      
+        <td>    <div class="box s" onclick="mainFunctions()" id="s"> s</div></td>
+        <td>    <div class="box t" onclick="mainFunctiont()" id="t"> t</div></td>
+        <td> </td>
+        <td> </td>
+      
+        <td>    <div class="box u" onclick="mainFunctionu()" id="u"> u</div></td>
+        <td>    <div class="box v" onclick="mainFunctionv()" id="v"> v</div></td>
+
+</tr>
+
+<tr>
+
+
+       
+        <td>    <div class="box w" onclick="mainFunctionw()" id="w"> w</div></td>
+        <td>    <div class="box x" onclick="mainFunctionx()" id="x"> x</div></td>
+        <td>  </td>
+        <td> </td>
+      
+        <td>    <div class="box y" onclick="mainFunctiony()" id="y"> y</div></td>
+        <td>    <div class="box z" onclick="mainFunctionz()" id="z"> z</div></td>
+</tr>
+
+</table>
+</p>
+
+                </div>
+                <div class="column middle" style="background-color:black;">
+
+                        <h1 style="color:blanchedalmond">USER SELECTION</h1>
+                        <br>
+
+                        <table style="width: 10%;">
+                                <tr>
+                            
+                                    <div class="user user1" onclick="userFunction1()" id="user1"> user1</div>
+                                   
+                                </tr>
+                                <tr>
+                            
+                                        <div class="user user2" onclick="userFunction2()" id="user2"> user2</div>
+                                       
+                                </tr>
+        </div>
+
+</body>
+
+
+<script>
+
+    var vare="notbooked" ,vara="notbooked",varb="notbooked",varc="notbooked" ,vard="notbooked" ,varf="notbooked" ,varg="notbooked" ,
+    varh="notbooked" ,vari="notbooked" ,varj="notbooked" ,vark="notbooked" ,varl="notbooked" ,varm="notbooked" ,varn="notbooked" ,
+    varo="notbooked" ,varp="notbooked" ,varq="notbooked" ,varr="notbooked" ,vars="notbooked" ,vart="notbooked" ,varu="notbooked" ,
+    varv="notbooked" ,varw="notbooked" ,varx="notbooked" ,vary="notbooked" ,varz="notbooked" ;
+
+var user;
+
+function userFunction1(){
+
+    user="user1";
+    const box=document.querySelector("#user1");
+    box.style.background="rgb(0, 153, 51)";
+
+}
+function userFunction2(){
+
+user="user2";
+const box=document.querySelector("#user2");
+box.style.background="rgb(26, 117, 255)";
+}
+
+function  mainFunctione(){
+
+if(vare=="notbooked")
+{   
+    
+    const box=document.querySelector("#e");
+    if(user=="user1")
+    {
+        box.style.background="rgb(0, 153, 51)";
+        vare="booked";   
+    }
+
+    else if(user=="user2")
+    {
+        box.style.background="rgb(26, 117, 255)";
+        vare="booked";   
+    }
+    else{
+        alert("select user");
+    }
+       
+   
+}
+
+else
+{
+    alert("Seat already booked");
+}
+
+
+}
+
+function  mainFunctiona(){
+
+if(vara=="notbooked")
+{   
+    
+    const box=document.querySelector("#a");
+    box.style.background="rgb(0, 153, 51)";
+    vara="booked";    
+}
+
+else
+{
+    alert("Seat already booked");
+}
+
+
+}
+function  mainFunctionb(){
+
+if(varb=="notbooked")
+{   
+    
+    const box=document.querySelector("#b");
+    box.style.background="rgb(0, 153, 51)";
+    varb="booked";    
+}
+
+else
+{
+    alert("Seat already booked");
+}
+
+
+}
+
+function  mainFunctionc(){
+
+if(varc=="notbooked")
+{   
+    
+    const box=document.querySelector("#c");
+    box.style.background="rgb(0, 153, 51)";
+    varc="booked";    
+}
+
+else
+{
+    alert("Seat already booked");
+}
+
+
+}
+function  mainFunctiond(){
+
+if(vard=="notbooked")
+{   
+    
+    const box=document.querySelector("#d");
+    box.style.background="rgb(0, 153, 51)";
+    vard="booked";    
+}
+
+else
+{
+    alert("Seat already booked");
+}
+
+
+}
+
+function  mainFunctionf(){
+
+if(varf=="notbooked")
+{   
+    
+    const box=document.querySelector("#f");
+    box.style.background="rgb(0, 153, 51)";
+    varf="booked";    
+}
+
+else
+{
+    alert("Seat already booked");
+}
+
+
+}
+
+function  mainFunctiong(){
+
+if(varg=="notbooked")
+{   
+    
+    const box=document.querySelector("#g");
+    box.style.background="rgb(0, 153, 51)";
+    varg="booked";    
+}
+
+else
+{
+    alert("Seat already booked");
+}
+
+
+}
+
+function  mainFunctionh(){
+
+if(varh=="notbooked")
+{   
+    
+    const box=document.querySelector("#h");
+    box.style.background="rgb(0, 153, 51)";
+    varh="booked";    
+}
+
+else
+{
+    alert("Seat already booked");
+}
+
+}
+
+function  mainFunctioni(){
+
+if(vari=="notbooked")
+{   
+    
+    const box=document.querySelector("#i");
+    box.style.background="rgb(0, 153, 51)";
+    vari="booked";    
+}
+
+else
+{
+    alert("Seat already booked");
+}
+
+
+}
+
+function  mainFunctionj(){
+
+if(varj=="notbooked")
+{   
+    
+    const box=document.querySelector("#j");
+    box.style.background="rgb(0, 153, 51)";
+    varj="booked";    
+}
+
+else
+{
+    alert("Seat already booked");
+}
+
+}
+
+function  mainFunctionk(){
+
+if(vark=="notbooked")
+{   
+    
+    const box=document.querySelector("#k");
+    box.style.background="rgb(0, 153, 51)";
+    vark="booked";    
+}
+
+else
+{
+    alert("Seat already booked");
+}
+
+
+}
+
+function  mainFunctionl(){
+
+if(varl=="notbooked")
+{   
+    
+    const box=document.querySelector("#l");
+    box.style.background="rgb(0, 153, 51)";
+    varl="booked";    
+}
+
+else
+{
+    alert("Seat already booked");
+}
+
+
+}
+
+function  mainFunctionm(){
+
+if(varm=="notbooked")
+{   
+    
+    const box=document.querySelector("#m");
+    box.style.background="rgb(0, 153, 51)";
+    varm="booked";    
+}
+
+else
+{
+    alert("Seat already booked");
+}
+
+
+}
+function  mainFunctionn(){
+
+if(varn=="notbooked")
+{   
+    
+    const box=document.querySelector("#n");
+    box.style.background="rgb(0, 153, 51)";
+    varn="booked";    
+}
+
+else
+{
+    alert("Seat already booked");
+}
+
+
+}
+
+function  mainFunctiono(){
+
+if(varo=="notbooked")
+{   
+    
+    const box=document.querySelector("#o");
+    box.style.background="rgb(0, 153, 51)";
+    varo="booked";    
+}
+
+else
+{
+    alert("Seat already booked");
+}
+
+
+}
+function  mainFunctionp(){
+
+if(varp=="notbooked")
+{   
+    
+    const box=document.querySelector("#p");
+    box.style.background="rgb(0, 153, 51)";
+    varp="booked";    
+}
+
+else
+{
+    alert("Seat already booked");
+}
+
+
+}
+
+function  mainFunctionq(){
+
+if(varq=="notbooked")
+{   
+    
+    const box=document.querySelector("#q");
+    box.style.background="rgb(0, 153, 51)";
+    varq="booked";    
+}
+
+else
+{
+    alert("Seat already booked");
+}
+
+
+}
+
+function  mainFunctionr(){
+
+if(varr=="notbooked")
+{   
+    
+    const box=document.querySelector("#r");
+    box.style.background="rgb(0, 153, 51)";
+    varr="booked";    
+}
+
+else
+{
+    alert("Seat already booked");
+}
+
+
+}
+
+function  mainFunctions(){
+
+if(vars=="notbooked")
+{   
+    
+    const box=document.querySelector("#s");
+    box.style.background="rgb(0, 153, 51)";
+    vars="booked";    
+}
+
+else
+{
+    alert("Seat already booked");
+}
+
+
+}
+function  mainFunctiont(){
+
+if(vart=="notbooked")
+{   
+    
+    const box=document.querySelector("#t");
+    box.style.background="rgb(0, 153, 51)";
+    vart="booked";    
+}
+
+else
+{
+    alert("Seat already booked");
+}
+
+
+}
+
+function  mainFunctionu(){
+
+if(varu=="notbooked")
+{   
+    
+    const box=document.querySelector("#u");
+    box.style.background="rgb(0, 153, 51)";
+    varu="booked";    
+}
+
+else
+{
+    alert("Seat already booked");
+}
+
+
+}
+
+function  mainFunctionv(){
+
+if(varv=="notbooked")
+{   
+    
+    const box=document.querySelector("#v");
+    box.style.background="rgb(0, 153, 51)";
+    varv="booked";    
+}
+
+else
+{
+    alert("Seat already booked");
+}
+
+
+}
+
+function  mainFunctionw(){
+
+if(varw=="notbooked")
+{   
+    
+    const box=document.querySelector("#w");
+    box.style.background="rgb(0, 153, 51)";
+    varw="booked";    
+}
+
+else
+{
+    alert("Seat already booked");
+}
+
+
+}
+function  mainFunctionx(){
+
+if(varx=="notbooked")
+{   
+    
+    const box=document.querySelector("#x");
+    box.style.background="rgb(0, 153, 51)";
+    varx="booked";    
+}
+
+else
+{
+    alert("Seat already booked");
+}
+
+
+}
+
+function  mainFunctiony(){
+
+if(vary=="notbooked")
+{   
+    
+    const box=document.querySelector("#y");
+    box.style.background="rgb(0, 153, 51)";
+    vary="booked";    
+}
+
+else
+{
+    alert("Seat already booked");
+}
+
+
+}
+function  mainFunctionz(){
+
+if(varz=="notbooked")
+{   
+    
+    const box=document.querySelector("#z");
+    box.style.background="rgb(0, 153, 51)";
+    varz="booked";    
+}
+
+else
+{
+    alert("Seat already booked");
+}
+
+
+}
+
+
+
+
+</script>
+</html>
